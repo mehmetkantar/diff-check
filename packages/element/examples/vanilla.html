@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redline in plain HTML</title>
+    <style>
+      html, body { height: 100%; margin: 0; font-family: system-ui, sans-serif; }
+      body { display: grid; grid-template-rows: auto 1fr; }
+      header { display: flex; gap: 12px; align-items: center; padding: 12px 16px; border-bottom: 1px solid #ddd; }
+      label { display: grid; gap: 4px; font-size: 13px; }
+      redline-viewer { height: 100%; }
+    </style>
+    <!-- Build first: npm run build -w packages/element -->
+    <script type="module" src="../dist/redline-element.js"></script>
+  </head>
+  <body>
+    <header>
+      <label>Original <input id="original" type="file" accept=".docx,.pdf" /></label>
+      <label>Revised <input id="revised" type="file" accept=".docx,.pdf" /></label>
+      <output id="status" aria-live="polite"></output>
+    </header>
+
+    <!-- ocr-assets: folder made by `npx redline-ocr-assets ocr` next to this page; enables OCR for scanned PDFs. -->
+    <redline-viewer locale="en" theme="system" view="side" ocr-assets="./ocr" ocr-langs="tur,eng"></redline-viewer>
+
+    <script type="module">
+      const viewer = document.querySelector('redline-viewer');
+      const pick = (id) => document.getElementById(id).files?.[0];
+      const status = document.getElementById('status');
+
+      for (const id of ['original', 'revised']) {
+        document.getElementById(id).addEventListener('change', () => {
+          const a = pick('original');
+          const b = pick('revised');
+          if (a && b) viewer.compare(a, b);
+        });
+      }
+
+      viewer.addEventListener('redline-ready', (e) => {
+        status.textContent = `${e.detail.stats.total} changes`;
+      });
+      viewer.addEventListener('redline-progress', (e) => {
+        status.textContent = `OCR ${e.detail.side}: page ${e.detail.page} of ${e.detail.pages}`;
+      });
+      viewer.addEventListener('redline-select', (e) => console.log('selected', e.detail.change));
+      viewer.addEventListener('redline-reviewed', (e) => console.log('reviewed', e.detail.keys));
+      viewer.addEventListener('redline-error', (e) => (status.textContent = `Could not read the ${e.detail.side ?? ''} file (${e.detail.code})`));
+    </script>
+  </body>
+</html>

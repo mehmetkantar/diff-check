@@ -1,0 +1,16 @@
+/*
+  Styles injected into the element's shadow root. The element compiles @redline/react's Tailwind
+  source, so it tells Tailwind where the components live.
+*/
+@import '../../react/src/styles.css';
+@source '../../react/src';
+
+:host {
+  display: block;
+  position: relative;
+  height: 100%;
+  min-height: 480px;
+}
+.rl-element-root {
+  height: 100%;
+}

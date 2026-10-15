@@ -1,0 +1,21 @@
+{
+  "name": "redline-demo",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "predev": "node ../../packages/ocr/bin/redline-ocr-assets.mjs public/ocr",
+    "dev": "vite",
+    "prebuild": "node ../../packages/ocr/bin/redline-ocr-assets.mjs public/ocr",
+    "build": "vite build",
+    "prebuild:single": "node ../../packages/ocr/bin/redline-ocr-assets.mjs public/ocr",
+    "build:single": "vite build --mode single",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@redline/core": "0.1.0",
+    "@redline/react": "0.1.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  }
+}

@@ -1,0 +1,14 @@
+﻿No;Tür;Eski konum;Yeni konum;Eski sayfa;Yeni sayfa;Açıklama;Önce;Sonra;Uyarılar;Dil
+1;Değişti;Madde 2.1;Madde 2.1;1;1;“kişisel veriler,” eklendi;;kişisel veriler,;;TR
+2;Değişti;Madde 2.1;Madde 2.1;1;1;“personal data,” eklendi;;personal data,;;EN
+3;Değişti;Madde 3.2;Madde 3.2;1;1;“makul özeni” yerine “basiretli bir tacir gibi özen”;makul özeni;basiretli bir tacir gibi özen;Hukuki ifade;TR
+4;Değişti;Madde 3.2;Madde 3.2;1;1;“reasonable care” yerine “the care of a prudent merchant”;reasonable care;the care of a prudent merchant;Hukuki ifade;EN
+5;Eklendi;;Madde 3.3;;1;2 paragraf eklendi;;Alıcı Taraf, Gizli Bilgiyi Açıklayan Taraf’ın önceden yazılı onayı olmaksızın üçüncü kişilere açıklayamaz. The Receiving Party may not disclose Confidential Information to third parties without the prior written consent of the Disclosing Party.;Hukuki ifade;TR
+6;Değişti;Madde 5.1;Madde 4.1;1;1;“2 (iki)” yerine “3 (üç)”;2 (iki);3 (üç);Rakam;TR
+7;Değişti;Madde 5.1;Madde 4.1;1;1;“2 (two)” yerine “3 (three)”;2 (two);3 (three);Rakam;EN
+8;Değişti;Madde 6.1;Madde 5.1;1;1;“500.000,00” yerine “750.000,00”;500.000,00;750.000,00;Rakam, Çeviri güncellenmedi;TR
+9;Taşındı;Madde 4;Madde 6;1;1;“İstisnalar” maddesi taşındı: Madde 4 → Madde 6;;;;TR
+10;Değişti;Madde 7.1;Madde 7.1;1;1;“15 (fifteen)” yerine “10 (ten)”;15 (fifteen);10 (ten);Rakam, Çeviri güncellenmedi;EN
+11;Değişti;Madde 8.1;Madde 8.1;1;1;“Merkez (Çağlayan)” yerine “Anadolu”;Merkez (Çağlayan);Anadolu;;TR
+12;Değişti;Madde 8.1;Madde 8.1;1;1;“Central (Çağlayan)” yerine “Anatolian”;Central (Çağlayan);Anatolian;;EN
+13;Eklendi;;Madde 8.2;;2;2 paragraf eklendi;;Türkçe ve İngilizce metinler arasında çelişki olması hâlinde Türkçe metin esas alınır. In case of any conflict between the Turkish and English texts, the Turkish text shall prevail.;Hukuki ifade;TR

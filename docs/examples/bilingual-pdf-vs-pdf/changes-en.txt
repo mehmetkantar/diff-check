@@ -1,0 +1,15 @@
+  1  Changed     Clause 2.1             “kişisel veriler,” added
+  2  Changed     Clause 2.1             “personal data,” added
+  3  Changed     Clause 3.2             “makul özeni” changed to “basiretli bir tacir gibi özen”  [Legal wording]
+  4  Changed     Clause 3.2             “reasonable care” changed to “the care of a prudent merchant”  [Legal wording]
+  5  Added       Clause 3.3             2 paragraphs added  [Legal wording]
+  6  Changed     Clause 5.1 -> Clause 4.1 “2 (iki)” changed to “3 (üç)”  [Figures]
+  7  Changed     Clause 5.1 -> Clause 4.1 “2 (two)” changed to “3 (three)”  [Figures]
+  8  Changed     Clause 6.1 -> Clause 5.1 “500.000,00” changed to “750.000,00”  [Figures, Translation not updated]
+  9  Moved       Clause 4 -> Clause 6   “İstisnalar” clause moved from Clause 4 to Clause 6
+ 10  Changed     Clause 7.1             “15 (fifteen)” changed to “10 (ten)”  [Figures, Translation not updated]
+ 11  Changed     Clause 8.1             “Merkez (Çağlayan)” changed to “Anadolu”
+ 12  Changed     Clause 8.1             “Central (Çağlayan)” changed to “Anatolian”
+ 13  Added       Clause 8.2             2 paragraphs added  [Legal wording]
+
+13 changes

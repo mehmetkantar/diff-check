@@ -1,0 +1,22 @@
+{
+  "name": "@redline/element",
+  "version": "0.1.0",
+  "description": "<redline-viewer> custom element for hosts that do not use React (Angular, Vue, plain HTML).",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/redline-element.js",
+  "module": "./dist/redline-element.js",
+  "exports": {
+    ".": "./dist/redline-element.js"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@redline/core": "0.1.0",
+    "@redline/react": "0.1.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  }
+}

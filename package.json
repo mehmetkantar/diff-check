@@ -1,0 +1,34 @@
+{
+  "name": "redline-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "workspaces": [
+    "packages/core",
+    "packages/react",
+    "packages/ocr",
+    "packages/element",
+    "apps/demo"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w apps/demo",
+    "build": "npm run build -w packages/core -w packages/ocr -w packages/react -w packages/element -w apps/demo",
+    "build:single": "npm run build:single -w apps/demo",
+    "typecheck": "tsc -p packages/core && tsc -p packages/ocr && tsc -p packages/react && tsc -p packages/element && tsc -p apps/demo",
+    "test": "vitest run",
+    "fixtures": "node scripts/make-fixtures.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "vite-plugin-singlefile": "^2.3.3",
+    "vitest": "^4.1.11"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "outDir": "dist/types",
+    "rootDir": "src",
+    "paths": { "@redline/core": ["../core/dist/types/index.d.ts"] }
+  },
+  "include": ["src"]
+}

@@ -1,0 +1,15 @@
+  1  Değişti     Madde 2.1              “kişisel veriler,” eklendi
+  2  Değişti     Madde 2.1              “personal data,” eklendi
+  3  Değişti     Madde 3.2              “makul özeni” yerine “basiretli bir tacir gibi özen”  [Hukuki ifade]
+  4  Değişti     Madde 3.2              “reasonable care” yerine “the care of a prudent merchant”  [Hukuki ifade]
+  5  Eklendi     Madde 3.3              2 paragraf eklendi  [Hukuki ifade]
+  6  Değişti     Madde 5.1 -> Madde 4.1 “2 (iki)” yerine “3 (üç)”  [Rakam]
+  7  Değişti     Madde 5.1 -> Madde 4.1 “2 (two)” yerine “3 (three)”  [Rakam]
+  8  Değişti     Madde 6.1 -> Madde 5.1 “500.000,00” yerine “750.000,00”  [Rakam, Çeviri güncellenmedi]
+  9  Taşındı     Madde 4 -> Madde 6     “İstisnalar” maddesi taşındı: Madde 4 → Madde 6
+ 10  Değişti     Madde 7.1              “15 (fifteen)” yerine “10 (ten)”  [Rakam, Çeviri güncellenmedi]
+ 11  Değişti     Madde 8.1              “Merkez (Çağlayan)” yerine “Anadolu”
+ 12  Değişti     Madde 8.1              “Central (Çağlayan)” yerine “Anatolian”
+ 13  Eklendi     Madde 8.2              2 paragraf eklendi  [Hukuki ifade]
+
+13 değişiklik

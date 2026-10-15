@@ -1,0 +1,23 @@
+# docker compose -f deploy/docker-compose.yml up --build
+services:
+  redline:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    image: redline:latest
+    ports:
+      - "8080:8080"
+    read_only: true
+    tmpfs:
+      - /var/cache/nginx
+      - /var/run
+      - /tmp
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETGID
+      - SETUID
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped

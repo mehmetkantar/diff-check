@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "paths": {
+      "@redline/core": ["../../packages/core/src/index.ts"],
+      "@redline/core/*": ["../../packages/core/src/*"],
+      "@redline/react": ["../../packages/react/src/index.ts"],
+      "@redline/ocr": ["../../packages/ocr/src/index.ts"]
+    }
+  },
+  "include": ["src", "vite.config.ts"]
+}

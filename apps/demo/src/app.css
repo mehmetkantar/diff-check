@@ -1,0 +1,15 @@
+/*
+  Development entry for the viewer styles. The demo compiles @redline/react's Tailwind source, so it
+  tells Tailwind where the components live. A product that installs the published package imports the
+  prebuilt stylesheet instead:  import '@redline/react/styles.css';
+*/
+@import '../../../packages/react/src/styles.css';
+@source '../../../packages/react/src';
+@source './';
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}

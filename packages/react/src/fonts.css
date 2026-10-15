@@ -1,0 +1,5 @@
+/* Optional: self-hosted fonts used by the default theme (works offline). Skip it to inherit the host's fonts
+   by overriding --rl-font-ui / --rl-font-doc on .rl. */
+@import '@fontsource-variable/geist';
+@import '@fontsource-variable/geist-mono';
+@import '@fontsource-variable/source-serif-4';

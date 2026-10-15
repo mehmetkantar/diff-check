@@ -1,0 +1,25 @@
+  1  Changed     Clause 1.1             “255” changed to “199”  [Figures]
+  2  Added       Clause 2.4             New paragraph added  [Figures]
+  3  Moved       Clause 6.3 -> Clause 3.2 Paragraph moved from Clause 6.3 to Clause 3.2
+  4  Changed     Clause 4.1             “12 (on iki)” changed to “24 (yirmi dört)”  [Figures]
+  5  Changed     Clause 4.2             “30 (otuz)” changed to “60 (altmış)”  [Figures]
+  6  Changed     Clause 5.1             “1.250.000,00 TL” changed to “1.400.000,00 TL + KDV” and 2 more  [Figures]
+  7  Changed     Clause 5.2             “30 (otuz)” changed to “45 (kırk beş)”  [Figures]
+  8  Changed     Clause 5.2             Table: “%30” changed to “%20” and 1 more  [Figures]
+  9  Changed     Clause 5.2             Table: “375.000,00” changed to “420.000,00”  [Figures]
+ 10  Changed     Clause 5.2             Table: “%40” changed to “%50” and 1 more  [Figures]
+ 11  Changed     Clause 5.3             “42.000,00” changed to “48.500,00”  [Figures]
+ 12  Added       Clause 5.4             New paragraph added  [Figures, Legal wording]
+ 13  Changed     Clause 6.1             “etmek için makul çabayı gösterecektir” changed to “etmekle yükümlüdür”  [Legal wording]
+ 14  Changed     Clause 6.2             “8 (sekiz)” changed to “4 (dört)”  [Figures]
+ 15  Changed     Clause 9.2 (b) -> Clause 8.2 (b) “ve teknik dokümantasyonu 10 (on) gün içinde” added  [Figures]
+ 16  Changed     Clause 9.2 (c) -> Clause 8.2 (c) Punctuation: “.” changed to “;”
+ 17  Deleted     Clause 9.3             Paragraph deleted  [Figures, Legal wording]
+ 18  Added       Clause 8.2 (d)         New paragraph added
+ 19  Moved       Clause 7 -> Clause 9   “Gizlilik” clause moved from Clause 7 to Clause 9  [Figures]
+ 20  Added       Clause 10              “Kişisel Verilerin Korunması” clause added  [Figures, Legal wording]
+ 21  Changed     Clause 10.2 -> Clause 11.2 “%10’unu” changed to “%15’ini” and 1 more  [Figures]
+ 22  Changed     Clause 11.1 -> Clause 12.1 “(Çağlayan)” changed to “Anadolu”
+ 23  Changed     Clause 12.1 -> Clause 13.1 “12 (on iki)” changed to “13 (on üç)” and 1 more  [Figures]
+
+23 changes

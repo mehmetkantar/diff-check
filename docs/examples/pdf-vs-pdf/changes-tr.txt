@@ -1,0 +1,25 @@
+  1  Değişti     Madde 1.1              “255” yerine “199”  [Rakam]
+  2  Eklendi     Madde 2.4              Yeni paragraf eklendi  [Rakam]
+  3  Taşındı     Madde 6.3 -> Madde 3.2 Paragraf taşındı: Madde 6.3 → Madde 3.2
+  4  Değişti     Madde 4.1              “12 (on iki)” yerine “24 (yirmi dört)”  [Rakam]
+  5  Değişti     Madde 4.2              “30 (otuz)” yerine “60 (altmış)”  [Rakam]
+  6  Değişti     Madde 5.1              “1.250.000,00 TL” yerine “1.400.000,00 TL + KDV” ve 2 değişiklik daha  [Rakam]
+  7  Değişti     Madde 5.2              “30 (otuz)” yerine “45 (kırk beş)”  [Rakam]
+  8  Değişti     Madde 5.2              Tablo: “%30” yerine “%20” ve 1 değişiklik daha  [Rakam]
+  9  Değişti     Madde 5.2              Tablo: “375.000,00” yerine “420.000,00”  [Rakam]
+ 10  Değişti     Madde 5.2              Tablo: “%40” yerine “%50” ve 1 değişiklik daha  [Rakam]
+ 11  Değişti     Madde 5.3              “42.000,00” yerine “48.500,00”  [Rakam]
+ 12  Eklendi     Madde 5.4              Yeni paragraf eklendi  [Rakam, Hukuki ifade]
+ 13  Değişti     Madde 6.1              “etmek için makul çabayı gösterecektir” yerine “etmekle yükümlüdür”  [Hukuki ifade]
+ 14  Değişti     Madde 6.2              “8 (sekiz)” yerine “4 (dört)”  [Rakam]
+ 15  Değişti     Madde 9.2 (b) -> Madde 8.2 (b) “ve teknik dokümantasyonu 10 (on) gün içinde” eklendi  [Rakam]
+ 16  Değişti     Madde 9.2 (c) -> Madde 8.2 (c) Noktalama: “.” yerine “;”
+ 17  Silindi     Madde 9.3              Paragraf silindi  [Rakam, Hukuki ifade]
+ 18  Eklendi     Madde 8.2 (d)          Yeni paragraf eklendi
+ 19  Taşındı     Madde 7 -> Madde 9     “Gizlilik” maddesi taşındı: Madde 7 → Madde 9  [Rakam]
+ 20  Eklendi     Madde 10               “Kişisel Verilerin Korunması” maddesi eklendi  [Rakam, Hukuki ifade]
+ 21  Değişti     Madde 10.2 -> Madde 11.2 “%10’unu” yerine “%15’ini” ve 1 değişiklik daha  [Rakam]
+ 22  Değişti     Madde 11.1 -> Madde 12.1 “(Çağlayan)” yerine “Anadolu”
+ 23  Değişti     Madde 12.1 -> Madde 13.1 “12 (on iki)” yerine “13 (on üç)” ve 1 değişiklik daha  [Rakam]
+
+23 değişiklik

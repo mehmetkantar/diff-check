@@ -1,0 +1,13 @@
+node_modules/
+dist/
+dist-single/
+*.tsbuildinfo
+.vite/
+coverage/
+.DS_Store
+*.log
+# LibreOffice lock files created while generating fixtures
+fixtures/.~lock.*
+.playwright-mcp/
+# OCR runtime files copied from node_modules by redline-ocr-assets
+apps/demo/public/ocr/

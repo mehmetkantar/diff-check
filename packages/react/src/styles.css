@@ -1,0 +1,324 @@
+/*
+  @redline/react styles. Built to live inside a host product:
+  - Tailwind utilities carry the `rl:` prefix (rl:flex, rl:hover:bg-hover) and no global reset (preflight) is shipped.
+  - Every token is a CSS variable scoped to the `.rl` root, so a host can re-theme by overriding them.
+  - Theme: `.rl[data-theme='dark']`; the viewer sets the attribute from its `theme` prop.
+
+  Colour rule: the chrome is monochrome. Colour is reserved for what a change means, using the
+  legal redline convention (Litera / Workshare / Word): insert = blue double underline, delete = red
+  strike, move = green double underline (new place) / double strike (old place). The line style
+  carries the meaning on its own, so it survives black-and-white printing and colour blindness.
+*/
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme) prefix(rl);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@custom-variant dark (&:where(.rl[data-theme='dark'], .rl[data-theme='dark'] *));
+
+.rl {
+  --rl-canvas: #eceef1;
+  --rl-surface: #f7f8f9;
+  --rl-paper: #fdfdfd;
+  --rl-ink: #16181c;
+  --rl-ink-2: #454a52;
+  --rl-ink-3: #676d77;
+  --rl-line: #e0e3e8;
+  --rl-line-strong: #c9ced5;
+  --rl-hover: rgb(22 24 28 / 0.05);
+  --rl-shadow: 0 1px 2px rgb(30 40 60 / 0.06), 0 8px 24px -12px rgb(30 40 60 / 0.18);
+
+  --rl-ins: #1d4ed8;
+  --rl-ins-bg: #e7eefd;
+  --rl-del: #b42318;
+  --rl-del-bg: #fbeae8;
+  --rl-mov: #0f6e3d;
+  --rl-mov-bg: #e2f2e8;
+  --rl-mod: #935600;
+  --rl-mod-bg: #faefd9;
+  --rl-hatch: rgb(22 24 28 / 0.045);
+
+  --rl-font-ui: 'Geist Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --rl-font-mono: 'Geist Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+  --rl-font-doc: 'Source Serif 4 Variable', 'Times New Roman', Georgia, serif;
+
+  /* radius scale: controls 8px, panels 12px, pills full */
+  --rl-radius: 8px;
+  --rl-radius-lg: 12px;
+
+  color-scheme: light;
+  background: var(--rl-canvas);
+  color: var(--rl-ink);
+  font-family: var(--rl-font-ui);
+  font-size: 14px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.rl[data-theme='dark'] {
+  --rl-canvas: #0d0f12;
+  --rl-surface: #14171b;
+  --rl-paper: #1a1d22;
+  --rl-ink: #eceef1;
+  --rl-ink-2: #b8bdc5;
+  --rl-ink-3: #8f959e;
+  --rl-line: #262a30;
+  --rl-line-strong: #383d45;
+  --rl-hover: rgb(255 255 255 / 0.05);
+  --rl-shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px -12px rgb(0 0 0 / 0.6);
+
+  --rl-ins: #93b4ff;
+  --rl-ins-bg: rgb(77 128 255 / 0.18);
+  --rl-del: #ff9e94;
+  --rl-del-bg: rgb(255 92 80 / 0.15);
+  --rl-mov: #7fdcaa;
+  --rl-mov-bg: rgb(52 199 120 / 0.15);
+  --rl-mod: #f3bb63;
+  --rl-mod-bg: rgb(242 170 60 / 0.14);
+  --rl-hatch: rgb(255 255 255 / 0.035);
+  color-scheme: dark;
+}
+
+/* Utility names: rl:bg-paper, rl:text-ink-3, rl:border-line, rl:text-ins, rl:bg-mov-bg, rl:font-doc ... */
+@theme inline {
+  --font-ui: var(--rl-font-ui);
+  --font-mono: var(--rl-font-mono);
+  --font-doc: var(--rl-font-doc);
+  --color-canvas: var(--rl-canvas);
+  --color-surface: var(--rl-surface);
+  --color-paper: var(--rl-paper);
+  --color-ink: var(--rl-ink);
+  --color-ink-2: var(--rl-ink-2);
+  --color-ink-3: var(--rl-ink-3);
+  --color-line: var(--rl-line);
+  --color-line-strong: var(--rl-line-strong);
+  --color-hover: var(--rl-hover);
+  --color-ins: var(--rl-ins);
+  --color-ins-bg: var(--rl-ins-bg);
+  --color-del: var(--rl-del);
+  --color-del-bg: var(--rl-del-bg);
+  --color-mov: var(--rl-mov);
+  --color-mov-bg: var(--rl-mov-bg);
+  --color-mod: var(--rl-mod);
+  --color-mod-bg: var(--rl-mod-bg);
+  --radius-ctl: var(--rl-radius);
+  --radius-panel: var(--rl-radius-lg);
+  --shadow-pop: var(--rl-shadow);
+}
+
+/* ---- Scoped base (instead of a global reset) ---- */
+@layer base {
+  .rl,
+  .rl *,
+  .rl *::before,
+  .rl *::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: var(--rl-line);
+  }
+  .rl :where(h1, h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) {
+    margin: 0;
+    padding: 0;
+  }
+  .rl :where(ul, ol) {
+    list-style: none;
+  }
+  .rl :where(button, input, select, textarea) {
+    font: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+    background: transparent;
+    margin: 0;
+  }
+  .rl :where(button) {
+    cursor: pointer;
+    padding: 0;
+  }
+  .rl :where(button:disabled) {
+    cursor: not-allowed;
+  }
+  .rl :where(svg, canvas, img) {
+    display: block;
+  }
+  .rl :focus-visible {
+    outline: 2px solid var(--rl-ink);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  .rl ::selection {
+    background: color-mix(in oklab, var(--rl-ins) 28%, transparent);
+  }
+}
+
+.rl .tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Document typography ---- */
+.rl .rl-doc {
+  font-family: var(--rl-font-doc);
+  font-size: 15.5px;
+  line-height: 1.62;
+  color: var(--rl-ink);
+  font-optical-sizing: auto;
+  /* Break inside a word only when it cannot fit on a line at all (long URLs, IBANs). */
+  overflow-wrap: break-word;
+}
+.rl .rl-doc-heading {
+  font-weight: 640;
+  letter-spacing: 0.01em;
+}
+.rl .rl-label {
+  font-family: var(--rl-font-ui);
+  font-size: 12.5px;
+  font-weight: 560;
+  color: var(--rl-ink-3);
+  font-variant-numeric: tabular-nums;
+}
+.rl .rl-cell-sep {
+  color: var(--rl-line-strong);
+  padding: 0 0.35em;
+}
+
+/* ---- Redline marks (one class per render-model span kind) ---- */
+.rl :is(.mk-ins, .mk-del, .mk-msrc, .mk-mdst) {
+  border-radius: 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding: 0 1px;
+}
+.rl .mk-ins {
+  color: var(--rl-ins);
+  background: var(--rl-ins-bg);
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.rl .mk-del {
+  color: var(--rl-del);
+  background: var(--rl-del-bg);
+  text-decoration-line: line-through;
+  text-decoration-thickness: 1.5px;
+}
+.rl .mk-msrc {
+  color: var(--rl-mov);
+  background: var(--rl-mov-bg);
+  text-decoration-line: line-through;
+  text-decoration-style: double;
+  text-decoration-thickness: 1px;
+}
+.rl .mk-mdst {
+  color: var(--rl-mov);
+  background: var(--rl-mov-bg);
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+/* Black-and-white mode: line styles only */
+.rl[data-bw] :is(.mk-ins, .mk-del, .mk-msrc, .mk-mdst) {
+  color: var(--rl-ink);
+  background: transparent;
+}
+.rl[data-bw] :is(.mk-msrc, .mk-mdst) {
+  font-style: italic;
+}
+
+/* Empty side of an inserted/deleted row */
+.rl .rl-hatch {
+  background-image: repeating-linear-gradient(-45deg, var(--rl-hatch) 0 6px, transparent 6px 12px);
+}
+
+/* Change bars in the margin (classic blackline) */
+.rl .bar-mod { box-shadow: inset 3px 0 0 var(--rl-mod); }
+.rl .bar-ins { box-shadow: inset 3px 0 0 var(--rl-ins); }
+.rl .bar-del { box-shadow: inset 3px 0 0 var(--rl-del); }
+.rl .bar-move { box-shadow: inset 3px 0 0 var(--rl-mov); }
+.rl .bar-renum { box-shadow: inset 3px 0 0 var(--rl-ink-3); }
+
+/* Selected change: calm ring plus a brief flash */
+.rl .is-active {
+  position: relative;
+}
+.rl .is-active::after {
+  content: '';
+  position: absolute;
+  inset: -2px 4px;
+  border: 1.5px solid var(--rl-ink);
+  border-radius: 8px;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .rl .rl-flash {
+    animation: rl-flash 900ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .rl .rl-fade-in {
+    animation: rl-fade-in 240ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .rl .rl-skeleton {
+    background: linear-gradient(90deg, var(--rl-line) 0%, color-mix(in oklab, var(--rl-line) 45%, transparent) 50%, var(--rl-line) 100%);
+    background-size: 200% 100%;
+    animation: rl-shimmer 1.4s linear infinite;
+  }
+  .rl .rl-press:active {
+    transform: translateY(1px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rl .rl-skeleton {
+    background: var(--rl-line);
+  }
+}
+@keyframes rl-flash {
+  0% { background-color: color-mix(in oklab, var(--rl-ink) 9%, transparent); }
+  100% { background-color: transparent; }
+}
+@keyframes rl-fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes rl-shimmer {
+  from { background-position: 100% 0; }
+  to { background-position: -100% 0; }
+}
+
+.rl .rl-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--rl-line-strong) transparent;
+}
+
+/* A selected change spanning several rows reads as one outline */
+.rl .is-active[data-seg='first']::after {
+  bottom: 0;
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.rl .is-active[data-seg='mid']::after {
+  top: 0;
+  bottom: 0;
+  border-top: 0;
+  border-bottom: 0;
+  border-radius: 0;
+}
+.rl .is-active[data-seg='last']::after {
+  top: 0;
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* Keep a replaced word readable: a hair of space between the struck and the inserted text */
+.rl .mk-del + .mk-ins,
+.rl .mk-msrc + .mk-mdst {
+  margin-left: 0.18em;
+}
+
+/* OCR progress hairline */
+@media (prefers-reduced-motion: no-preference) {
+  .rl .rl-progress {
+    transition: width 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
